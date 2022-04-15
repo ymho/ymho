@@ -1,7 +1,3 @@
-### Hi there 
-
-I am majoring in Social Informatics at the Graduate School of Informatics, Kyoto University. My research field is medical informatics.
-
 <!--
 **ymho/ymho** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
