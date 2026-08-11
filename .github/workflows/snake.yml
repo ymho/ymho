@@ -31,12 +31,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate GitHub stats
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&hide_title=true&rank_icon=github&theme=transparent
+          options: username=${{ github.repository_owner }}&show_icons=true&hide_title=true&rank_icon=github&theme=transparent
           path: dist/github-stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       - name: Publish profile assets
         uses: crazy-max/ghaction-github-pages@v3.1.0
