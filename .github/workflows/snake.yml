@@ -1,4 +1,4 @@
-name: Generate Snake
+name: Generate Profile Assets
 
 on:
   schedule:
@@ -14,9 +14,12 @@ jobs:
       contents: write
 
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Generate contribution snake
         uses: Platane/snk/svg-only@v3
         with:
@@ -27,7 +30,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish snake to output branch
+      - name: Generate GitHub stats
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&hide_title=true&rank_icon=github&theme=transparent
+          path: dist/github-stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish profile assets
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
