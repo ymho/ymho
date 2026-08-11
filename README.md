@@ -12,6 +12,10 @@ I enjoy building cloud-native systems, developer tools, and software around rail
 
 <img src="https://skillicons.dev/icons?i=aws,docker,githubactions,linux,git,vscode" alt="Cloud and tools" />
 
+## 📊 GitHub Stats
+
+![GitHub Stats](https://raw.githubusercontent.com/ymho/ymho/output/github-stats.svg)
+
 ## 🐍 Contributions
 
 <picture>
